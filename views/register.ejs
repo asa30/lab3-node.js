@@ -1,15 +1,31 @@
 <%- include('header'); -%>
-<h1>register</h1>
-<h2>society:</h2> <input type="text">
-<h2>Contact name:</h2> <input type="text">
-<h2>password:</h2> <input type="password">
-<h2>phone number:</h2> <input type="text">
-<h2>fax:</h2> <input type="text">
-<h2>city:</h2> <input type="text">
-<h2>address:</h2> <input type="text">
-<h2>zipcode:</h2> <input type="text">
-<h1></h1>
-<input id="reg" type="button" value="register">
-<h1></h1>
-<script></script>
+<form method="post" action="/api/register">
+    <h3>Society</h3>
+    <input type="text" placeholder="Enter your society ">
+
+    <h3>Contact Name</h3>
+    <input type="text" placeholder="Enter your contact name">
+
+    <h3>address</h3>
+    <input type="text" placeholder="Enter your address">
+
+    <h3>zipcode</h3>
+    <input type="text" placeholder="Enter your zipcode">
+
+    <h3>city</h3>
+    <input type="text" placeholder="Enter your city">
+
+    <h3>phone</h3>
+    <input type="tel" placeholder="Enter your phone number">
+
+    <h3>fax</h3>
+    <input type="tel" placeholder="Enter your fax number">
+
+    <h3>Informations</h3>
+    <input type="text" placeholder=""><br><br>
+
+    <button>register</button>
+    <br>
+    <br>
+</form>
 <%- include('footer'); -%>
