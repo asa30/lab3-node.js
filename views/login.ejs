@@ -1,9 +1,21 @@
 <%- include('header'); -%>
 <h1>Login</h1>
-<h2>username:</h2> <input type="text">
-<h2>password:</h2> <input type="password">
+<h2>username:</h2> <input id="usrname" type="text">
+<h2>password:</h2> <input id="usrpass" type="password">
 <h2></h2>
-<input type="button" value="login">
-<h3>no account <a>register here</a>.</h3>
+<input id="loginButton" type="button" value="login">
+<h3>no account <a href="/register">register here</a>.</h3>
 <h1></h1>
+<script>
+    const HTTP = new XMLHttpRequest();
+    const url = '/login';
+    let loginButton = document.getElementById("loginButton");
+    loginButton.onclick = function(){
+        HTTP.open("GET",url);
+        HTTP.send();
+    }
+    HTTP.onreadystatechange=(e)=>{
+        console.log(HTTP.responseText);
+    }
+</script>
 <%- include('footer'); -%>
