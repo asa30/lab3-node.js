@@ -1,10 +1,10 @@
 <%- include('header'); -%>
 <h1>login</h1>
-<form method="GET" action="/api/login">
-    <h3>Username:</h3>
-    <input type="text" name="usrname" placeholder="Enter your username"><br>
-    <h3>Password</h3>
-    <input type="password" name="usrpass" placeholder="Enter your password"><br>
+<form method="POST" action="/api/login">
+    <label>Username</label><br>
+    <input type="text" name="username" placeholder="Enter your username"><br>
+    <label>Password</label><br>
+    <input type="password" name="password" placeholder="Enter your password"><br>
     <br>
     <button>login</button>
     <br>

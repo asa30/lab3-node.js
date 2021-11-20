@@ -1,4 +1,3 @@
-//const { Client } = require('../models/entities');
 const clientDAO = require('../db/clientDAO');
 const bcrypt = require("bcryptjs");
 
@@ -73,9 +72,7 @@ const registerService = (client, callback) => {
     });
 };
 
-const searchService = function(callback) { 
-    //to be completed
-    
+const searchService = function(callback) { //to be completed
 };
 
 const searchNumclientService = function(num_client, callback) {
@@ -88,8 +85,8 @@ const deleteService = function(num_client, callback) {
 
 module.exports = {
     loginService,
-    registerService,
-    searchNumclientService,
-    searchService,
-    deleteService
+    registerService
+    //searchNumclientService,
+    //searchService,
+    //deleteService
 };
